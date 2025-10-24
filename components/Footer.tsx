@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className='w-full mb-[100px] pb-10 mb-5' id='contact'>
         <div className='flex flex-col items-center'>
-            <h1 className='text-5xl font-extrabold text-white text-center tracking-tight leading-tight lg:max-w-[45vw] md:maw-w-[30vw]'>
+            <h1 className='text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-white text-center tracking-tight leading-tight lg:max-w-[45vw] md:max-w-[30vw]'>
                 Ready to take {''}<span className='text-purple-200'>your</span> digital
                 presence to the next level ?
             </h1>

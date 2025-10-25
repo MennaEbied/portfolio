@@ -46,13 +46,6 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
 
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText('mennahesham253@gmail.com');
-    setCopied(true);
-  };
-
   return (
     <div
       className={cn(

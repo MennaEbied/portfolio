@@ -166,16 +166,13 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      .arcColor((e: { color: string } | string) => {
-        if (typeof e === 'string') {
-          return e;
-        }
-        return e.color || '#ffffff';
+      .arcColor((i: number) => {
+        return data[i]?.color || '#ffffff';
       })
-      .arcAltitude((e) => (e as { arcAlt: number }).arcAlt * 1)
+      .arcAltitude((d: unknown) => (d as { arcAlt: number }).arcAlt * 1)
       .arcStroke(() => [0.32, 0.28, 0.3][Math.round(Math.random() * 2)])
       .arcDashLength(defaultProps.arcLength)
-      .arcDashInitialGap((e) => (e as { order: number }).order * 1)
+      .arcDashInitialGap((d: unknown) => (d as { order: number }).order * 1)
       .arcDashGap(15)
       .arcDashAnimateTime(() => defaultProps.arcTime);
 
